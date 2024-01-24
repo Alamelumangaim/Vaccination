@@ -1,0 +1,13 @@
+<div class="main">
+  <div class="admin">
+        <a *ngIf="isadminRequired" routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><p style="font-family: 'Julius Sans One', sans-serif">ADMIN</p></a>
+    </div>
+    <div class="nav" *ngIf="ismenuRequired">
+        <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><p>HOME</p></a>
+        <p>ABOUT</p>
+        <p>CONTACT</p>
+        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page"><button type="button">LOGIN</button></a>
+        
+    </div>
+</div>
+<router-outlet></router-outlet>

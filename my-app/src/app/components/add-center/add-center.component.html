@@ -1,0 +1,38 @@
+
+<div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+    <div style="display: flex;align-items: center;">
+        <div >
+            <h2 style="font-family:  'Julius Sans One', sans-serif;text-align: center;font-size: large">ADD CENTER</h2>
+        </div>
+        <div>
+            <button style="border: none;background-color: white;justify-content: flex-end;" (click)="close()"><img src="../../../assets/images/error.png"/></button>
+        </div>
+    </div>
+    <div class="form">
+        
+        <form [formGroup]="centerForm" (ngSubmit)="SubmitForm()">
+            
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" name="name">
+                <small  *ngIf="(this.centerForm.controls['name'].invalid) && (this.centerForm.controls['name'].dirty || this.centerForm.controls['name'].touched)">
+                    <div *ngIf="centerForm.controls['name'].errors?.['required']">Name is required</div>
+                </small>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Location</mat-label>
+                <input matInput formControlName="location" name="location">
+                <small  *ngIf="(this.centerForm.controls['location'].invalid) && (this.centerForm.controls['location'].dirty || this.centerForm.controls['location'].touched)">
+                    <div *ngIf="centerForm.controls['location'].errors?.['required']">Name is required</div>
+                </small>
+            </mat-form-field>
+            
+            <div style="display: flex;justify-content: center;">
+                <button type="submit">ADD CENTER</button>
+                
+            </div><br>
+            
+        </form>
+        
+    </div>
+</div>

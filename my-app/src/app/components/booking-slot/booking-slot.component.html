@@ -1,0 +1,32 @@
+<app-header>user</app-header>
+<div style="display: flex;justify-content: center;"> 
+    <form [formGroup]="bookingForm" (ngSubmit)="SubmitForm()">
+        <h4>BOOK APPOINTMENT</h4><br><br>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="username">
+      </mat-form-field>
+      <small *ngIf="bookingForm.controls['username'].invalid && (bookingForm.controls['username'].dirty || bookingForm.controls['username'].touched)">
+            <div style="color: red;" *ngIf="bookingForm.controls['username'].errors?.['required']">Name is required</div>
+      </small>
+      <mat-form-field>
+        <mat-label>Phone number</mat-label>
+        <input matInput formControlName="phonenumber">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Aadhaar number</mat-label>
+        <input matInput formControlName="aadhaarnumber">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput formControlName="email">
+      </mat-form-field>
+   
+    <br><br>
+    <p-toast></p-toast>
+    <div style="display: flex;justify-content: center;">
+      <button type="submit">BOOK</button>
+    </div>
+    </form>
+</div> 
+

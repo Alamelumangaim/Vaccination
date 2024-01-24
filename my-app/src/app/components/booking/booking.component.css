@@ -1,0 +1,30 @@
+igx-time-picker{
+    background-color: #F5F5F5;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+form h4{
+    text-align: center;
+    font-family:  'Julius Sans One', sans-serif;
+}
+form button{
+    background-color:#31AF68;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    width: max-content;
+    height: max-content;
+    border-radius: 15px;
+}
+input[type="time"]::-webkit-calendar-picker-indicator{
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+    color: grey;
+    cursor: pointer;
+    }

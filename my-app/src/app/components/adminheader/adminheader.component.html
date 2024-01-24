@@ -1,0 +1,6 @@
+<button mat-button [matMenuTriggerFor]="menu" style="height: max-content;padding-top: 10px;"><img src="../../../assets/images/menu.png"/></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Dashboard</button>
+  <a routerLink="/history" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><button mat-menu-item >Appointment History</button></a>
+  <a routerLink="/center" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><button mat-menu-item >Centers</button></a>
+</mat-menu>

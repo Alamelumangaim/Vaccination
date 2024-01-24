@@ -1,0 +1,36 @@
+<app-header></app-header>
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<!-- <button (click)="openSpinner()">Open SPinner</button> -->
+ 
+    <div class="doctor" >
+        <img src="../../../assets/images/d22e7102-aac3-11ee-aabc-00163e00d5dd.jpeg"/>
+        <h1>Make your life happy even better</h1>
+        <p>Our website prioritizes your health and well-being, ensuring a hassle-free journey towards community immunity. Join us in the fight against Covid-19  your health, our priority!</p>
+      
+        <a routerLink="/slot" routerLinkActive="active" ariaCurrentWhenActive="page"><button>BOOK AN APPOINTMENT</button></a>
+    </div>
+    <br><br>
+    <p style="font-family: 'Julius Sans One', sans-serif;font-size: x-large;text-align: center;">TOP CENTERS</p>
+    <div style="display: flex;justify-content: center;flex-direction: row ">
+        <div class="center-container"  *ngFor="let center of centers">
+            
+                <img src="../../../assets/images/{{center.imageUrl}}" />
+                <p style="color: rgb(34, 34, 34);font-family: 'Roboto Flex', sans-serif;font-weight: 700;margin-bottom: -35px;">{{center.name}}</p>
+                <p style="color: rgb(81, 81, 81);font-family: 'Roboto Flex', sans-serif;margin-bottom: -2px;">{{center.location}}</p>
+                <div style="display: flex;justify-content: center;">   
+                    <a routerLink="/about/{{center.id}}/{{center.name}}" routerLinkActive="active" ariaCurrentWhenActive="page"><button>BOOK APPOINTMENT</button></a>
+                </div> 
+        </div>
+        
+    </div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
+
+

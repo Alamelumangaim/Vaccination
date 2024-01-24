@@ -1,0 +1,37 @@
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-right: 20px;
+    align-items: center;
+}
+.admin{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px
+}
+.admin p{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+}
+.nav p{
+    font-family: 'Julius Sans One', sans-serif;
+font-size: 20px;
+}
+.nav button{
+    background-color:#31AF68;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    width: max-content;
+    height: max-content;
+    border-radius: 15px;
+    font-family: 'Julius Sans One', sans-serif
+}
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}

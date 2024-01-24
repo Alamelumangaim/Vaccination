@@ -1,0 +1,24 @@
+<app-header></app-header>
+<h4 style="font-family:  'Julius Sans One', sans-serif;text-align: center;">BOOK YOUR SLOTS</h4><br>
+    <div style="display: flex;flex-direction: row;gap: 20px;justify-content: center;">
+        
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" *ngFor="let date of dates">
+            
+            <mat-button-toggle value="underline" type="submit" value="{{date.date}}" (click)="dateSelector(date.date)">{{date.date}}</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div><br><br>
+    <div style="display: flex;justify-content: center;">
+        <div>
+            <div class="center" *ngFor="let center of centers">
+                <p style="font-family: 'Roboto', sans-serif;">{{center.name}}:{{center.location}}</p>
+                <p-toast></p-toast>
+                <div style="display: flex;flex-direction: row;gap: 20px;">
+                    
+                    <button routerLink="/booking/{{timeslot.timeslot}}/{{date}}/{{center.name}}" *ngFor="let timeslot of timeslots" (click)="invoke(date)">{{timeslot.timeslot}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<router-outlet></router-outlet>
+

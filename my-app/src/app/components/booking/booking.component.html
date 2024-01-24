@@ -1,0 +1,45 @@
+<app-header></app-header>
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+  <div style="display: flex;justify-content: center;"> 
+    <form [formGroup]="bookForm" (ngSubmit)="SubmitForm()">
+        <h4>BOOK APPOINTMENT</h4><br><br>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone number</mat-label>
+        <input matInput formControlName="phonenumber">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <!-- <igx-time-picker
+    #timePicker
+    formControlName="time"
+    placeholder="Select time slot"
+    [mode]="mode"
+    [minValue]="'16:00:00'"
+    [spinLoop]='false'
+    [inputFormat]="format"
+    >
+        <label igxLabel>Time</label>
+    </igx-time-picker><br> -->
+    <input type="time" placeholder="Choose a time" formControlName="time" style="background-color: #F5F5F5;height: 50px;border: none;border-bottom: 1px solid rgb(171, 171, 171);font-family: 'Julius Sans One', sans-serif;font-size: 17px;padding-left: 15px;"/>
+    <br><br>
+    <div style="display: flex;justify-content: center;">
+      <button type="submit" (click)="countAdd()">BOOK</button>
+    </div>
+    </form>
+</div> 

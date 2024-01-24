@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div>
+    <div class="img-container">
+        <img src="../../../assets/images/mika-baumeister-uz_T7h8ds04-unsplash 1.png"/>
+        
+    </div>
+    <div class="center">
+        <img  src="../../../assets/images/{{centers[0].imageUrl}}"/>
+        <div style="display: flex;flex-direction: column;">
+            <h4>{{centers[0].name}}</h4>
+            <p>{{centers[0].name}} stands as a beacon of excellence in the healthcare landscape, dedicated to providing top-notch medical services to its community. </p>
+        
+            <div style="display: flex;flex-direction: row;gap:10px;margin-top: -10px;">
+                <p style="color: black;background-color: white;width: max-content;height: max-content;padding: 5px;border-radius: 0px;">Covishield</p>
+                <p style="color: black;background-color: white;width: max-content;height: max-content;padding: 5px;border-radius: 0px;">Covaxin</p>
+                
+            </div>
+            <a routerLink="/slot" routerLinkActive="active" ariaCurrentWhenActive="page"><button>Book Appointment</button></a>
+        </div>
+    </div>
+    
+        <div style="display: flex;justify-content: center !important;text-align: center;">
+            <div class="passage">
+                <p>Our mission is to provide accessible, efficient, and high-quality vaccination services to individuals of all ages. 
+                    Through a combination of cutting-edge medical practices, state-of-the-art facilities, and a compassionate healthcare 
+                    team, we strive to create a safe and welcoming environment for everyone seeking immunization.
+                    Our center offers a wide range of vaccinations for various age groups, ensuring that individuals are protected against 
+                    common and emerging diseases. From childhood vaccinations to booster shots for adults, we tailor our programs to meet 
+                    the diverse needs of our community.</p>
+            </div>
+        </div><br><br>
+   <h4 style="text-align: center;font-family:  'Julius Sans One', sans-serif;">BLOGS</h4><br><br>   
+            <div class="blogs">
+                <div class="blog-posts">
+                    <img src="../../../assets/images/blog1.jpg"/>
+                    <p>Jan 1,2024</p>
+                </div>
+                <div class="blog-posts">
+                    <img src="../../../assets/images/blog2.jpg"/>
+                    <p>Dec 15,2023</p>
+                </div>
+                <div class="blog-posts">
+                    <img src="../../../assets/images/blog3.jpg"/>
+                    <p>June 5,2023</p>
+                </div>
+            </div>
+        
+   
+</div>
+<app-footer></app-footer>
+<router-outlet></router-outlet>
