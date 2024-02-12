@@ -1,61 +1,58 @@
-import { Component , ViewChild} from '@angular/core';
-import { PowerBIEmbedModule} from 'powerbi-client-angular';
-import { PowerBIReportEmbedComponent } from 'powerbi-client-angular';
-import { IReportEmbedConfiguration, models, service, Embed } from 'powerbi-client';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AdminheaderComponent } from '../adminheader/adminheader.component';
+import {Chart} from 'chart.js/auto';
+import { plugins } from 'chart.js/dist/core';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [PowerBIEmbedModule],
+  imports:[AdminheaderComponent],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css'
+  styleUrl: './dashboard.component.css',
 })
-export class DashboardComponent {
-  reportConfig: IReportEmbedConfiguration = {
-    type: 'report',
-    embedUrl: '',
-    tokenType: models.TokenType.Embed,
-    accessToken: '',
-    settings: undefined,
-  };
-  @ViewChild(PowerBIReportEmbedComponent)
-  reportObj!: PowerBIReportEmbedComponent;
-  eventHandlersMap = new Map([
-    [
-      'loaded',
-      () => {
-        const report = this.reportObj.getReport();
-        report.setComponentTitle('Embedded report');
+
+export class DashboardComponent implements OnInit{
+
+  public bookings: number=20;
+  public centers:number=10;
+  ngOnInit(): void {
+    new Chart("myChart", {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'],
+        datasets: [{
+          label: '# of Bookings',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
       },
-    ],
-    ['rendered', () => console.log('Report has rendered')],
-    [
-      'error',
-      (event?: service.ICustomEvent<any>) => {
-        if (event) {
-          console.error(event.detail);
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
         }
-      },
-    ],
-    ['visualClicked', () => console.log('visual clicked')],
-    ['pageChanged', (event) => ''],
-  ]) as Map<
-    string,
-    (event?: service.ICustomEvent<any>, embeddedEntity?: Embed) => void | null
-  >;
-
-  constructor() {}
-
-  ngOnInit() {
-    this.embedReport();
+      }
+    });
+    new Chart("myChart1",{
+      type:'doughnut',
+      data:{
+        labels:['Chennai','Bangalore','Mumbai','Delhi'],
+        datasets:[{
+          label:"Bookings by cities",
+          data:[300,20,100],
+          backgroundColor:[
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+          ],
+          hoverOffset:4,
+          
+        }]
+      }
+    })
   }
-
-  embedReport(){
-     this.reportConfig = {
-        ...this.reportConfig,
-         accessToken: 'your token',
-         id: 'your reportId',
-         embedUrl: 'your embedUrl',
-      };
-  }
+  
 
 }
+  
+

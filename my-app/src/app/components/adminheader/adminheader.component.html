@@ -1,6 +1,40 @@
-<button mat-button [matMenuTriggerFor]="menu" style="height: max-content;padding-top: 10px;"><img src="../../../assets/images/menu.png"/></button>
+<!-- <button mat-button [matMenuTriggerFor]="menu" style="height: max-content;padding-top: 10px;"><img src="../../../assets/images/menu.png"/></button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Dashboard</button>
+  <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><button mat-menu-item>Dashboard</button></a>
   <a routerLink="/history" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><button mat-menu-item >Appointment History</button></a>
   <a routerLink="/center" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><button mat-menu-item >Centers</button></a>
-</mat-menu>
+</mat-menu> -->
+
+<div class="dash">
+  <br>
+ VaxEASE
+  
+  <hr style="margin-top: 20px;">
+  <div style="margin-left: 20px;margin-top: 20px;">
+      <div style="display: flex;flex-direction: row;height: 30px;align-items: center;gap: 10px;margin-bottom: 20px">
+        <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: white;">
+          <img src="../../../assets/images/dashboard.png" width="20px" height="20px" style="margin-top: 20px;"/>
+          </a>
+          <a routerLink="/dashboard" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: white;">
+            <p>Dashboard</p>
+          </a>
+      </div>
+      <div style="display: flex;flex-direction: row;height: 30px;align-items: center;gap: 10px;margin-bottom: 20px">
+        <a routerLink="/history" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: white;">
+          <img src="../../../assets/images/history.png" width="20px" height="20px" style="margin-top: 20px;"/>
+          </a>
+          <a routerLink="/history" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: white;">
+            <p>Appointments History</p>
+          </a>
+      </div>
+      <div style="display: flex;flex-direction: row;height: 30px;align-items: center;gap: 10px;margin-bottom: 20px">
+        <a routerLink="/center" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: white;">
+          <img src="../../../assets/images/syringe.png" width="20px" height="20px" style="margin-top: 20px;"/></a>
+          <a routerLink="/center" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: white;">
+          <p>Vaccination centers</p>
+        </a>
+      </div>
+  </div>
+  
+  
+</div>

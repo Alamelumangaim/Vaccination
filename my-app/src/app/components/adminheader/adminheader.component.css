@@ -1,0 +1,11 @@
+.dash{
+    background-color: rgb(29, 71, 41);
+    width: max-content;
+    padding: 10px;
+    justify-content: flex-start;
+    height: 100%;
+    font-family: 'Spectral SC', serif;
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+}

@@ -14,6 +14,7 @@ import { CenterService } from '../../services/center.service';
 export class HeaderComponent implements DoCheck{
   ismenuRequired = false;
   isadminRequired=false;
+  isLoginRequired=true;
   constructor(private router: Router,private service: CenterService){}
   currenturl = this.router.url
   ngDoCheck(): void {
@@ -28,6 +29,12 @@ export class HeaderComponent implements DoCheck{
     }
     else{
       this.isadminRequired=false;
+    }
+    if(this.service.IsLoggedIn()==true){
+      this.isLoginRequired=false;
+    }
+    else{
+      this.isLoginRequired=true;
     }
   }
 

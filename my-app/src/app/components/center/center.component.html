@@ -1,10 +1,10 @@
-<div style="display: flex;flex-direction: row;justify-content: space-between;margin-top: 20px;align-items: center;">
-  <app-adminheader></app-adminheader>
-  <div style="display: flex;justify-content: flex-end;">
-      <button class="center" (click)="addCenter()">ADD CENTER</button>
+<div style="display: flex;flex-direction: row;gap: 50px;">
+    
+  <div style="height: 100vh;">
+    <app-adminheader></app-adminheader>
   </div>
-</div>
-  <br>
+  
+  <div style="display: flex;align-items: center;flex-direction: column;margin-top: 10%;width: 80%;">
 <table mat-table matSort [dataSource]="dataSource">
 
     <!--- Note that these columns can be defined in any order.
@@ -42,5 +42,7 @@
                  showFirstLastButtons
                  aria-label="Select page of periodic elements">
   </mat-paginator>
+  </div>
+  </div>
 <router-outlet></router-outlet>
   

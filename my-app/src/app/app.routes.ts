@@ -10,6 +10,7 @@ import { CenterComponent } from './components/center/center.component';
 import { SlotbookingComponent } from './components/slotbooking/slotbooking.component';
 import { BookingSlotComponent } from './components/booking-slot/booking-slot.component';
 import { AboutCenterComponent } from './components/about-center/about-center.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 export const routes: Routes = [
     {
         path:'register',
@@ -50,5 +51,9 @@ export const routes: Routes = [
     {
         path:'about/:id/:name',
         component:AboutCenterComponent
+    },
+    {
+        path:'dashboard',
+        component:DashboardComponent
     }
 ];

@@ -6,8 +6,8 @@
         <a routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page" style="text-decoration: none;color: black;"><p>HOME</p></a>
         <p>ABOUT</p>
         <p>CONTACT</p>
-        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page"><button type="button">LOGIN</button></a>
-        
+        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" *ngIf="isLoginRequired"><button type="button">LOGIN</button></a>
+        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" *ngIf="!isLoginRequired"><button type="button">LOGOUT</button></a>
     </div>
 </div>
 <router-outlet></router-outlet>

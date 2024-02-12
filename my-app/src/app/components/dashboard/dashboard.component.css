@@ -1,0 +1,17 @@
+.dash{
+    background-color: rgb(29, 71, 41);
+    width: 20%;
+    justify-content: flex-start;
+    height: 100%;
+    font-family: 'Spectral SC', serif;
+    color: white;
+    font-size: x-large;
+    font-weight: 500;
+}
+#chart-gauge, #chart-pie, #chart-column, #chart-line {
+    display: block;
+    min-width: 150px;
+    max-width: 400px;
+    height: 200px;
+    margin: 0 auto;
+  }
